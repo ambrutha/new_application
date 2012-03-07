@@ -1,0 +1,17 @@
+<div id="profile">
+<%= form_for @prof do |f| %>
+<div><%= f.label :UserName %><br />
+<%= f.text_field :username  f.value :@a.username%></div>
+<div><%= f.label :email %><br />
+<%= f.email_field :email %></div>
+<div><%= f.label :mobile %><br />
+<%= f.text_field :mobile% f.value :@a.mobile></div>
+<div><%= f.label :password %><br />
+<%= f.password_field :password %></div>
+<div><%= f.label :password_confirmation %><br />
+<%= f.password_field :password_confirmation %></div>
+<div><%= f.submit "" %>SaveProfile</div>
+<% end %>
+</div>
+</div>
+

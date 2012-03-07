@@ -1,0 +1,76 @@
+class ContactController < ApplicationController
+def index
+@users = Email.find_all_by_users_id(current_user.id)
+end
+
+def new
+@user = Email.new
+end
+
+def create
+@user = Email.create(params[:email])
+@user.vericode=rand(10000)
+@user.users_id=current_user.id
+@user.status=0
+if @user.save
+ redirect_to :action=>"index"
+UserMailer.send_mail(@user).deliver
+
+else
+render :create
+end
+end
+
+def check
+@c=Email.find_by_id(params[:id])
+p @c
+@u=@c.status
+p @u.to_s
+if(@u==true)
+p "sucess"
+redirect_to :action=>"thanks"
+else
+@x=Email.find(params[:id])
+p @x.email
+UserMailer.send_email(@x.email).deliver
+redirect_to :action=>"contact"
+end
+end
+def thanks
+end
+def show
+@user = Email.find_all_by_users_id(current_user.id)
+end
+
+def edit
+@user =Email.find_all_by_users_id(current_user.id)
+end
+
+def update
+@user =Email.find_by_id(params[:id])
+if @user.update_attributes(params[:email])
+ redirect_to contact_index_path
+else
+render :edit
+end
+end
+
+def destroy
+@user =Email.find_by_id(params[:id])
+if @user.destroy
+redirect_to :action=>"index"
+end
+end
+def verify
+    @u=Email.find_by_vericode(params[:id])
+    @r=@u.vericode
+    p s=params[:id].to_i
+    if (@r==s)
+    p "success"
+    @u.status=1
+    @u.save
+    else
+    p "fail"
+    end
+ end
+end

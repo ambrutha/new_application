@@ -1,0 +1,10 @@
+<%= form_for @user,:url=>{:action=>"create"}  do |user_form| %>
+Enter ur Emailid: <%= user_form.text_field :email %><br/>
+<div><%= user_form.label :ischeck%>
+ <%=user_form.radio_button :ischeck, 1%>Primary 
+ <%=user_form.radio_button :ischeck, 0%>Secondary
+ </div><br />
+<%= user_form.submit "add" %>
+<% end %>
+<a href="/contact/">List Of Users</a>
+

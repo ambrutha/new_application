@@ -1,0 +1,9 @@
+<p> I am in edit user </p>
+<%= form_for @u,:url=>{:action=>"update"}  do |user_form| %>
+Phone number: <%= user_form.text_field :phoneno%><br/>
+<div><%= user_form.label :check%>
+ <%=user_form.radio_button :check, 1%>Primary 
+ <%=user_form.radio_button :check, 0%>Secondary
+ </div><br />
+<%= user_form.submit "save" %>
+<% end %>

@@ -1,0 +1,15 @@
+<table border="1">
+<tr>
+<th>Username</th>
+<th>email</th>
+<th>mobileno</th>
+</tr>
+<% @pro.each do |k| %>
+<tr>
+<td><%= k.username %></td>
+<td><%= k.email%></td>
+<td><%= k.mobile%> </td>
+</tr>
+<% end %>
+<%=link_to "Go back",'/dashboard/'%>
+</table>

@@ -1,0 +1,4 @@
+
+&nbsp&nbsp&nbsp&nbsp&nbsp<li><h1><%= link_to "Email_id",new_contact_path%></h1></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+<h1><%= link_to "Phone_number",new_phone_path%></h1> 
+

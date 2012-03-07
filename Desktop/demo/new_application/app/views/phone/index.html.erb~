@@ -1,0 +1,26 @@
+<div id="row">
+<p> List of users </p>
+
+<table border="1">
+<tr>
+<th>Phone number</th>
+
+<th> Action</th>
+<th> Action</th>
+<th> Action</th>
+</tr>
+<% @use.each do |user| %>
+<tr>
+<td><%= user.phoneno %></td>
+<td><%= link_to "verify" ,phone_path(user.id) %></td>
+<td><%= link_to "Edit" ,edit_phone_path(user.id) %> </td>
+<td><%= link_to "Delete",phone_path(user.id), :method => :delete%> </td>
+</tr>
+<% end %>
+
+</table>
+<a href="http://0.0.0.0:3000/contact">Back</a>
+</div>
+
+
+

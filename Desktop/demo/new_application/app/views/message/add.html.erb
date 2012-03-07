@@ -1,0 +1,8 @@
+<%= form_for :value,:url=>{:action=>"add"} do |user_form| %></br>
+Enter ur sender id: <%= user_form.text_field:sender_id %></br>
+Enter the recevier id: <%= user_form.text_field :receiver_id %></br>
+subject: <%= user_form.text_field :subject %></br>
+content: <%= user_form.text_area :content %><br/>
+<%= user_form.submit "add" %>
+<% end %>
+

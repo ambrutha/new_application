@@ -1,0 +1,12 @@
+class CreateMails < ActiveRecord::Migration
+  def change
+    create_table :mails do |t|
+      t.integer :users_id
+      t.string :email
+      t.integer :verificationcode
+      t.boolean :status
+      t.boolean :expiredcode
+      t.timestamps
+    end
+  end
+end

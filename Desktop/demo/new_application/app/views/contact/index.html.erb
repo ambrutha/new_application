@@ -1,0 +1,29 @@
+<p> List of users </p>
+
+<table border="1">
+<tr>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<th>Email id</th>
+
+
+<th> status</th>
+<th> Action</th>
+<th> Action</th>
+<th> Action</th>
+<th> Action </th>
+</tr>
+<% @users.each do |u| %>
+<tr>
+<td><%= u.email %></td>
+<td><%= u.status %></td>
+<td><%= link_to "show" ,contact_path(u.id) %></td>
+<td><%= link_to "Edit" ,edit_contact_path(u.id) %> </td>
+<td><%= link_to "Delete",contact_path(u.id), :method => :delete%> </td>
+<td><%= link_to "check" ,"/contact/check/#{u.id}" %> </td>
+</tr>
+<% end %>
+
+</table>
+
+<a href="/contact/new">Back</a>
+
+

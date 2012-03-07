@@ -1,0 +1,8 @@
+<%= form_for :friend,:url=>{:action=>"add"} do |user_form| %>
+Enter ur FirstName: <%= user_form.text_field:name %><br/>
+mobile Number: <%= user_form.text_field :mobileno %><br/>
+Email Id: <%= user_form.text_field :email %><br/>
+<%= user_form.submit "add" %>
+<% end %>
+<h5><%= link_to "ManageFriends",display_friend_path%></h5> 
+

@@ -1,0 +1,4 @@
+<%= form_for :check,:url=>{:action=>"verify"} do |mail_form| %>
+<%= mail_form.text_field :name%>
+<%= mail_form.submit "search" %>
+<% end %>

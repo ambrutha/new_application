@@ -1,0 +1,106 @@
+a-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Multiverse 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20111031
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ACTIV CONTACTS</title>
+<link href="/assets/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+        
+        </div>
+        <div id="menu">
+		<ul>
+<h1> <center> ACTIV CONTACTS </center> </h1>
+		<li class="current_page_item"><a href="#">Homepage</a></li>
+		<%=yield%>
+		<li><a href="#">Search</a></li>
+		</div>
+	</div>
+	
+	<!-- end #header -->
+	<!--div id="page">
+		<div id="content">
+			<div class="post">
+				
+				<p class="meta">Posted by <a href="#">Someone</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					
+				</div>
+			</div>
+			
+			<div class="post">
+				
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="center">
+			<ul>
+				<li>
+					<div id="search" >
+						<form method="get" action="#">
+							<div>
+								<input type="text" name="s" id="search-text" value="" />
+								<input type="submit" id="search-submit" value="GO" />
+							</div>
+						</form>
+					</div>
+					
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	<!-- end #page -->
+<!--/div>
+<!--div id="footer-content">
+	<div id="footer-bg" class="container">
+		<div id="column1">
+			<h2>Sitelink</h2>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Sitemap</a></li>
+				<li><a href="#">Testimonials</a></li>
+				<li><a href="#">Contact</a></li>
+				
+			</ul>
+		</div>
+		<div id="column2">
+			<h2>About</h2>
+			<ul>
+				<li><a href="#">Activ Contacts</a></li>
+				<li><a href="#">Company</a></li>
+				
+			</ul>
+		</div>
+		<div id="column3">
+			<h2>Policies</h2>
+			<ul>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Term Of Use</a></li>
+			
+			</ul>
+		</div!-->
+	</div>
+	</div>
+<!--div id="footer">
+	<p>@ 2006 - 2008 Railsfactory Inc. | All rights reserved.</p>
+</div!-->
+</div>
+<!-- end #footer -->
+</body>
+</html>

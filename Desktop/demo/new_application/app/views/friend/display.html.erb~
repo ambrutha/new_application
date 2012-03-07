@@ -1,0 +1,22 @@
+<table border="1">
+<tr>
+<th>Username</th>
+<th>Email</th>
+<th>Mobileno</th>
+<th>Action</th>
+<th>Action</th>
+</tr>
+<% if @friends.count > 0 %>
+<% @friends.each do |frnd| %>
+<% u = User.find(frnd.friendid) %>
+<tr>
+<td><%= u.username %></td>
+<td><%= u.email %></td>
+<td><%= u.mobile %></td>
+<td><%= link_to "Edit" ,"/friend/update/#{frnd.friendid}" %> </td>
+<td><%= link_to "Delete" ,:action=>"destroy" ,:id=>frnd.id %> </td>
+</tr>
+<% end %>
+<% end %>
+</table>
+<%= link_to "goback","/friends/create"%>

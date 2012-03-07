@@ -1,0 +1,5 @@
+<%= form_for @u,:url=>{:action=>"create"}  do |user_form| %>
+Enter ur PhoneNumber: <%= user_form.text_field :phoneno %><br/>
+<%= user_form.submit "add" %>
+<% end %>
+

@@ -1,0 +1,7 @@
+<p> I am in edit user </p>
+<%= form_for @friend,:url=>{"/friend/update"}  do |user_form| %>
+UserName: <%= user_form.text_field :username%>
+Email id: <%= user_form.text_field :email%>
+Mobile No: <%= user_form.text_field :mobile%><br/>
+<%= user_form.submit "save" %>
+<% end %>

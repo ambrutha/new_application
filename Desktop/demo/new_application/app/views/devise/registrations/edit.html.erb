@@ -1,0 +1,37 @@
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+   <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :Username %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp<%= f.text_field :username %></div>
+
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :email %>
+ &nbsp&nbsp&nbsp&nbsp&nbsp <%= f.email_field :email%>
+<sapn style=" font-family:'Arial'; color:#0000FF; font-size:11px;">
+<u> VerifyYourMail</u></div>
+
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :Phonenumber %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp<%= f.text_field :mobile %>
+<sapn style=" font-family:'Arial'; color:#0000FF; font-size:11px;">
+<u> VerifyYourphonenumber</u></div>
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :Newpassword %> <i>(leave blank if you don't want to change it)</i>
+  &nbsp&nbsp&nbsp&nbsp&nbsp<%= f.password_field :password %></div>
+
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :password_confirmation %>
+  &nbsp&nbsp&nbsp&nbsp&nbsp<%= f.password_field :password_confirmation %></div>
+
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :Old_password %> <i>(we need your current password to confirm your changes)</i>>
+ &nbsp&nbsp&nbsp&nbsp&nbsp <%= f.password_field :current_password %></div>
+
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.submit "Update" %>
+ <sapn style=" font-family:'Arial'; color:#0000FF; font-size:11px;">
+<u> Cancel </u>
+</div>
+
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
+
+<%= link_to "Back", :back %>

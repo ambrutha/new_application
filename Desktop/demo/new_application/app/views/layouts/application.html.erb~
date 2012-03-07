@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NewApplication</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+
+ <h1><b>ACTIV </b><span class="logo_colour"><b>CONTACTS</b></span></a></h1>
+ </div>
+      </div>
+ <div id="menubar">
+        <ul id="menu">
+				
+ <% if current_user %>
+     <li><a href="/dashboard/">DashBoard</a></li>          
+<li><%= link_to "Myprofile",edit_user_registration_path%></li>
+<li><a href="/dashboard/a">Activ Contacts</a></li>
+<li><a href="/friend/new">My friends</a></li>
+<li><a href="/message/add">Message</a></li>
+<li><a href="/fetch/show">Search</a></li>
+  <li> <%=link_to "Sign Out", destroy_user_session_path %></li>
+         <%else%>
+             <li class="selected"><a href="/home/show">Home</a></li>
+             <li class="selected"><%=link_to "LOGIN", new_user_session_path%></li>
+            <li class="selected"> <%=link_to "SIGN_UP",new_user_registration_path%></li>
+         <%end%>
+
+ </div> 
+   
+  </div>  
+    
+<%=yield%>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div class="footer" ></br>
+ <a href="www.railsfactory.org"></a></br>@copyright All rights reserved
+</div>
+
+
+</div>
+</body>
+</html>

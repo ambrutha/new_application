@@ -1,0 +1,7 @@
+
+<p> User Details </p>
+<% @.each do |k|%>
+</br>
+ <%=k.phoneno%>
+<%end%>
+
